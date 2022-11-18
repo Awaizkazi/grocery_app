@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -15,30 +18,51 @@ class IntroPage extends StatelessWidget {
             child: Image.asset('lib/images/avocado.png'),
           ),
           // We Deliver groceries at your doorstep
-          const Padding(
+          Padding(
             padding: EdgeInsets.all(24.0),
             child: Text(
               'We deliver groceries to your doorstep',
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              style: GoogleFonts.notoSerif(
+                  fontSize: 30, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
           ),
+          SizedBox(
+            height: 24,
+          ),
           // Fresh items everyday
-          const Text('Fresh items Everyday'),
-          // get Started button
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(12),
+          Text(
+            'Fresh items Everyday',
+            style: TextStyle(
+              color: Colors.grey[700],
             ),
-            child: const Padding(
-              padding: EdgeInsets.all(24.0),
-              child: Text(
-                'Get Started',
-                style: TextStyle(color: Colors.white),
+          ),
+          Spacer(),
+          // get Started button
+          GestureDetector(
+            onTap: (() => Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) {
+                      return HomePage();
+                    }),
+                  ),
+                )),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.deepPurple,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(24.0),
+                child: Text(
+                  'Get Started',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
+          Spacer(),
         ],
       ),
     );
