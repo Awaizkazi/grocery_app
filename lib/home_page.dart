@@ -52,6 +52,7 @@ class HomePage extends StatelessWidget {
                 builder: ((context, value, child) {
                   return GridView.builder(
                     itemCount: value.shopItems.length,
+                    padding: EdgeInsets.all(12.0),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2),
