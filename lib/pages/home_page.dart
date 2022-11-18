@@ -3,7 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_app/model/cart_model.dart';
 import 'package:provider/provider.dart';
 
-import 'components/grocery_item_tile.dart';
+import '../components/grocery_item_tile.dart';
+import 'cart_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
                     padding: EdgeInsets.all(12.0),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2),
+                            crossAxisCount: 2, childAspectRatio: 1 / 1.3),
                     itemBuilder: ((context, index) {
                       return GroceryItemTile(
                         itemName: value.shopItems[index][0],
@@ -70,6 +71,14 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () =>
+            Navigator.push(context, MaterialPageRoute(builder: ((context) {
+          return CartPage();
+        }))),
+        backgroundColor: Colors.black,
+        child: Icon(Icons.shopping_bag),
       ),
     );
   }

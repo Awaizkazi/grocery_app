@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/model/cart_model.dart';
 import 'package:provider/provider.dart';
 
-import 'intro_page.dart';
+import 'pages/intro_page.dart';
 
 void main() {
   runApp(const MyApp());
