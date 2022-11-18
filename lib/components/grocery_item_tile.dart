@@ -29,8 +29,17 @@ class GroceryItemTile extends StatelessWidget {
               height: 64,
             ),
             // item name
-
+            Text(itemName),
             // price + button
+            MaterialButton(
+              onPressed: () {},
+              color: color,
+              child: Text(
+                itemPrice,
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            )
           ],
         ),
       ),
