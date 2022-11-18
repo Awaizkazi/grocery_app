@@ -33,13 +33,13 @@ class GroceryItemTile extends StatelessWidget {
             // price + button
             MaterialButton(
               onPressed: () {},
-              color: color,
+              color: color[800],
               child: Text(
-                itemPrice,
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                '\$' + itemPrice,
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
               ),
-            )
+            ),
           ],
         ),
       ),
