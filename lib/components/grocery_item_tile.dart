@@ -10,11 +10,22 @@ class GroceryItemTile extends StatelessWidget {
     super.key,
     required this.imagePath,
     required this.itemName,
-    required this.itemPrice, this.color,
+    required this.itemPrice,
+    this.color,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Column(
+        children: [
+          // Image
+          Image.asset(imagePath),
+          // item name
+
+          // price + button
+        ],
+      ),
+    );
   }
 }
