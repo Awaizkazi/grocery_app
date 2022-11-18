@@ -73,12 +73,16 @@ class HomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            Navigator.push(context, MaterialPageRoute(builder: ((context) {
-          return CartPage();
-        }))),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: ((context) {
+              return const CartPage();
+            }),
+          ),
+        ),
         backgroundColor: Colors.black,
-        child: Icon(Icons.shopping_bag),
+        child: const Icon(Icons.shopping_bag),
       ),
     );
   }

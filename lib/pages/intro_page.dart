@@ -19,7 +19,7 @@ class IntroPage extends StatelessWidget {
           ),
           // We Deliver groceries at your doorstep
           Padding(
-            padding: EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(24.0),
             child: Text(
               'We deliver groceries to your doorstep',
               style: GoogleFonts.notoSerif(
@@ -27,7 +27,7 @@ class IntroPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
           // Fresh items everyday
@@ -37,7 +37,7 @@ class IntroPage extends StatelessWidget {
               color: Colors.grey[700],
             ),
           ),
-          Spacer(),
+          const Spacer(),
           // get Started button
           GestureDetector(
             onTap: (() => Navigator.pushReplacement(
