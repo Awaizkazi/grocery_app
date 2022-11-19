@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class CartPage extends StatelessWidget {
@@ -9,6 +11,19 @@ class CartPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('My Cart'),
         centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: ((context, index) {
+                return ListTile(
+                  title: Text('ietms'),
+                );
+              }),
+            ),
+          ),
+        ],
       ),
     );
   }
