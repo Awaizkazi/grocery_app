@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_app/model/cart_model.dart';
 import 'package:provider/provider.dart';
 
@@ -9,13 +10,26 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My Cart'),
         centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        iconTheme: const IconThemeData(color: Colors.black),
       ),
       body: Consumer<Cartmodel>(
         builder: ((context, value, child) {
           return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: Text(
+                  'My Cart',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.notoSerif(
+                      fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+              ),
+              // List of item cart
               Expanded(
                 child: ListView.builder(
                   itemCount: value.cartItems.length,
